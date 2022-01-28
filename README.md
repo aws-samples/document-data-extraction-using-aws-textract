@@ -17,6 +17,7 @@ In this post, you will learn how to build a text extraction solution leveraging 
 **a. Lambda-FnA**
 
 Lambda-FnA File
+![Lambda-FnA Filess](./Lambda/Lambda-FnA.py)
 
 **b. Lambda-FnB**
 
