@@ -11,7 +11,7 @@ In this post, you will learn how to build a text extraction solution leveraging 
 
 ## Architecture
 
-![Architecture Diagram](./image/Textract_architecture.PNG)
+![Architecture Diagram](./image/Textract_architecturee.PNG)
 
 
 **a. Lambda-FnA**
