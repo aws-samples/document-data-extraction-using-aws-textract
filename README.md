@@ -11,16 +11,16 @@ In this post, you will learn how to build a text extraction solution leveraging 
 
 ## Architecture
 
-![Architecture Diagram](./image/Textract_architecture.PNG)
+![Architecture Diagram](./image/Textract_architecturee.PNG)
 
 
 **a. Lambda-FnA**
 
-Lambda-FnA File
+![Lambda-FnA Files](./Lambda/Lambda-FnA.py)
 
 **b. Lambda-FnB**
 
-Lambda-FnB  
+![Lambda-FnB Files](./Lambda/Lambda-FnB.py) 
 
 
 ## License
