@@ -27,7 +27,8 @@ In this post, you will learn how to build a text extraction solution leveraging 
 
 
 
-Following are the high-level steps:
+## Following are the high-level steps:
+
 1.	User uploads an image file or pdf document to Amazon S3 for analysis.
 
 2.	Amazon S3 event triggers AWS Lambda Function Fn-A
@@ -52,7 +53,8 @@ Following are the high-level steps:
 
 
 
-Cleanup:
+## Cleanup:
+
 •	Step#1. Shutdown OpenSearch domain
 
 •	Step#2. Delete the Comprehend endpoint
@@ -60,7 +62,8 @@ Cleanup:
 •	Step#3. Clear S3 bucket with all the objects
 
 
-Conclusion:
+## Conclusion:
+
 As you have learned in this post, you can build an ML-based text extraction solution to uncover the unstructured data from pdfs or images.  Data grows at a very fast pace in any industry and it would be difficult to derive intelligence from diverse data sources unless you incorporate some sort of data extraction and optimization function. You can gain insights into the undiscovered data, by leveraging managed ML services, Amazon Textract and Amazon Comprehend.
 
 The extracted data from pdfs or images is indexed and populated into Amazon OpenSeacrh. You can use Kibana to search and visualize the data. By implementing this solution, customers can reduce the costs in physical document storage, labor costs in manually identifying relevant information. 
