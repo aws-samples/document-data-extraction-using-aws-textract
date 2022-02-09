@@ -20,7 +20,7 @@ In this post, you will learn how to build a text extraction solution leveraging 
 
 **b. Lambda-FnB**
 
-Lambda-FnB  
+![Lambda-FnB Files](./Lambda/Lambda-FnB.py) 
 
 
 
