@@ -59,7 +59,7 @@ In this post, you will learn how to build a text extraction solution leveraging 
 
 •	Step#2. Delete the Comprehend endpoint
 
-•	Step#3. Clear S3 bucket with all the objects
+•	Step#3. Clear the S3 bucket with all the objects
 
 
 ## Conclusion:
