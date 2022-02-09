@@ -23,6 +23,46 @@ In this post, you will learn how to build a text extraction solution leveraging 
 Lambda-FnB  
 
 
+
+
+
+Key AWS services used in this solution include:
+Amazon S3: Durable document storage used for central document management with fine-tuned access controls
+AWS Lambda: Functional Logic to call the AWS Textract, Comprehend services and processing
+Amazon Textract: Extracts data from scanned documents 
+Amazon SNS: Notifies text extraction completion process to SQS
+Amazon SQS: Queues to carry the extracted text response and triggers another AWS Lambda
+Amazon Comprehend : Uses custom trained ML to find discrepancies in key names from Amazon Textract
+Amazon Opensearch: Indexing and Visualizing of the data
+
+Following are the high-level steps:
+1.	User uploads an image file or pdf document to Amazon S3 for analysis.
+2.	Amazon S3 event triggers AWS Lambda Function Fn-A
+3.	AWS Lambda Function Fn-A invokes Amazon Textract to extract text as key-value pairs from image or PDF	
+4.	Amazon Textract sends the extracted keys from image/pdf to Amazon SNS	
+5.	Amazon SNS notifies Textract completion process with the extracted keys to Amazon SQS	
+6.	AWS SQS triggers AWS Lambda Function Fn-B with the extracted keys	
+7.	AWS Lambda Function Fn-B invokes Amazon Comprehend for the custom entity recognition
+8.	The data is indexed and loaded into Amazon Opensearch
+9.	Kibana processes the indexed data
+10.	User accesses Kibana to search documents
+
+
+
+
+Cleanup:
+•	Step#1. Shutdown OpenSearch domain
+•	Step#2. Delete the Comprehend endpoint
+•	Step#3. Clear S3 bucket with all the objects
+
+Conclusion:
+As you have learned in this post, you can build an ML-based text extraction solution to uncover the unstructured data from pdfs or images.  Data grows at a very fast pace in any industry and it would be difficult to derive intelligence from diverse data sources unless you incorporate some sort of data extraction and optimization function. You can gain insights into the undiscovered data, by leveraging managed ML services, Amazon Textract and Amazon Comprehend.
+
+The extracted data from pdfs or images is indexed and populated into Amazon OpenSeacrh. You can use Kibana to search and visualize the data. By implementing this solution, customers can reduce the costs in physical document storage, labor costs in manually identifying relevant information. 
+
+This solution eliminates manual identification of relevant information, and drives decision making efficiency. While we discussed oil and gas industry vertical as an example, this solution can be applied to any industry that has physical/scanned documents including legal documents, purchase receipts, inventory reports, invoices and purchase orders, etc.
+
+
 ## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
